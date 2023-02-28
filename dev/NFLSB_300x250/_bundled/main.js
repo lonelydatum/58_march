@@ -24,9 +24,9 @@ gsap.defaults({
 });
 
 var read = {
-	frame1: 2.2,
+	frame1: 1.6,
 	frame2: 2.7,
-	frame3: 2.7
+	frame3: 3
 };
 
 var w = bannerSize.w;
@@ -78,16 +78,16 @@ function standard() {
 	tl.to([".bg", ".t1"], { duration: .2, opacity: 0 }, "+=" + read.frame1);
 
 	if (universalBanner.size === "320x50") {
-		tl.add(fader(".frame2a", read.frame3), "+=.1");
-		tl.add(fader(".frame2b", 1.2), "+=.1");
+		// tl.add(fader(".frame2a", read.frame3), "+=.1")
+		// tl.add(fader(".frame2b", 1.2), "+=.1")
 	} else if (universalBanner.size === "300x250") {
-		tl.add(fader(".frame2a", 2.3), "+=.1");
-		tl.add(fader(".frame2b", read.frame2), "+=.1");
-	} else {
-		tl.from(".frame2a", { duration: .3, opacity: 0 }, "+=.1");
-		tl.from(".frame2b", { duration: .3, opacity: 0 }, "+=.3");
-		tl.to(".frame2", { duration: .2, opacity: 0 }, "+=" + read.frame2);
-	}
+			// tl.add(fader(".frame2a", 2.3), "+=.1")
+			// tl.add(fader(".frame2b", read.frame2), "+=.1")
+		} else {
+				// tl.from(".frame2a", {duration:.3, opacity:0}, "+=.1")
+				// tl.from(".frame2b", {duration:.3, opacity:0}, "+=.3")
+				// tl.to(".frame2", {duration:.2, opacity:0}, `+=${read.frame2}`)
+			}
 
 	tl.add(fader(".frame3", read.frame3), "+=.3");
 
